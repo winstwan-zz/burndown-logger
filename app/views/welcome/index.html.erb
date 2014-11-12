@@ -1,0 +1,19 @@
+
+
+<div id="title_block">
+    on da Klok
+</div>
+
+
+<div id="schedule_list">
+    <% @schedules.each do |s| %>
+        <%= render :partial => 'schedules/front', :locals => {:schedule => s} %>
+    <% end %>
+</div>
+
+<div id="new_schedule_div">
+</div>
+
+<div id="add_new">
+    <%= link_to '+', new_schedule_path, :remote => true %>
+</div>

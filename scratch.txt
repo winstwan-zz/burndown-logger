@@ -1,0 +1,15 @@
+Users
+    -username
+    -has schedules
+
+Schedules
+    -name
+    -has categories
+
+Categories
+    -hours
+    -has work
+
+Work (logged hours)
+    -belongs to categories
+

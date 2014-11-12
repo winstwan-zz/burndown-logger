@@ -1,0 +1,5 @@
+$('#new_schedule_div').html('');
+$('#add_new').show();
+var s = $('<%=j render partial: 'schedules/front', locals: { schedule: @schedule } %>');
+$('#schedule_list').append(s);
+$(document).trigger("new_schedule_created");

@@ -1,0 +1,30 @@
+<h1>New schedule</h1>
+
+<%= render 'form' %>
+<% if false %>
+<%= form_for :schedule, url: schedules_path do |f| %>
+    <%= f.hidden_field :user_id, current_user.id %>
+
+    <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    </p>
+
+    <p>
+    <%= f.label :hours_alloted %><br>
+    <%= f.text_field :hours_allotted %>
+    </p>
+
+    <p>
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+    </p>
+
+    <p>
+    <%= f.submit %>
+    </p>
+<% end %>
+
+<% end # if false %>
+
+<%= link_to 'Back', schedules_path %>

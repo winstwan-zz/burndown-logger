@@ -1,0 +1,76 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('bebasneue-webfont.eot');
+    src: url('bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bebasneue-webfont.woff') format('woff'),
+         url('bebasneue-webfont.ttf') format('truetype'),
+         url('bebasneue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import 'susy';
+
+$total-columns  : 8;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+.page {
+    /* page acts as a container for our grid. */
+    @include container;
+
+    header {
+        @include span-columns(8,8);
+        height: 30px;
+    }
+
+    #login_block {
+        @include span-columns(2 omega,8);
+        text-align: right;
+    }
+
+    #title_block {
+        @include span-columns(8,8);
+
+        font-family: BebasNeueRegular, sans-serif;
+        font-size: 5em;
+        text-align: center;
+        margin: 50px 0px;
+    }
+
+    #schedule_list {
+        @include span-columns(8,8);
+
+        .schedule_title {
+          font-family: BebasNeueRegular, sans-serif;
+          font-size: 2em;
+          color: #444444;
+
+          text-decoration: none;
+        }
+    }
+
+    #add_new {
+        @include span-columns(8,8);
+        text-align: center;
+        font-family: BebasNeueRegular, sans-serif;
+        font-size: 45px;
+
+        a {
+          text-decoration: none;
+          color: #8888888;
+        }
+
+        a:hover {
+          color: #000000;
+          background-color: #ffffff;
+        }
+    }
+}
+

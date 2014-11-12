@@ -1,0 +1,19 @@
+<div class="schedule_info">
+
+  <%= link_to schedule.name, schedule_path(schedule), {:class => "schedule_title"} %>
+
+  <div id=<%= "schedule_#{schedule.id}_progress_bar" %> class="progress_bar"
+    total_hours="<%= schedule.hours_allotted %>" remaining_hours="<%= schedule.hours_left %>">
+    <div class="hours_left_count" style="float:left">
+      <%= schedule.hours_left %>
+      <span class="units_label">hrs</span>
+    </div>
+    <div class="hours_allotted_count" style="float:right">
+      <%= schedule.hours_allotted %>
+    </div>
+    <%= link_to '', new_hour_path(schedule: schedule.id), {id: "schedule_#{schedule.id}_progress", class: "progress_indicator"} %> 
+  </div>
+</div>
+
+<div style="display:none" id="edit_schedule_div">
+</div>

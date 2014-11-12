@@ -1,0 +1,79 @@
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'susy';
+
+.schedule_info {
+  @include span-columns(8,8);
+  margin-bottom: 20px;
+}
+
+.progress_bar {
+  @include span-columns(8,8);
+  height: 40px;
+  
+  border-style: solid;
+  border-width: 4px;
+  border-color: black;
+
+  .units_label {
+    font-size: 10px;
+    color: #dddddd;
+    font-family: BebasNeueRegular, sans-serif;
+  }
+
+  .hours_left_count {
+    float: left;
+
+    font-family: BebasNeueRegular, sans-serif;
+    font-size: 45px;
+    color: #dddddd;
+
+    margin: 10px 5px;
+  }
+  .hours_allotted_count {
+    float: right;
+
+    font-family: BebasNeueRegular, sans-serif;
+    font-size: 45px;
+    color: #dddddd;
+
+    margin: 10px 5px;
+  }
+
+  .progress_indicator {
+    display: block;
+    height: 100%;
+    width: 0px;
+    background-color: #444444;
+  }
+}
+
+#new_schedule_div {
+  // @include container;
+  .new_schedule_field {
+    display: inline;
+    border-style: none;
+    border-bottom-style: solid;
+  }
+
+  #new_schedule_name_field {
+    @include span-columns(2,8);
+  }
+  #new_schedule_hours_field {
+    @include span-columns(1,8);
+  }
+  #new_schedule_notes_field {
+    @include span-columns(4,8);
+  }
+  #new_schedule_submit {
+    @include span-columns(1 omega,8);
+    border-style: none;
+    background: none;
+    cursor: hand;
+    color: #888888;
+  }
+  #new_schedule_submit:hover {
+    color: #000000;
+  }
+}
