@@ -16,8 +16,8 @@ Gemfile.lock
 /tmp
 
 # from octopress gitignore
-vendor
-public
+/public/assets
+/vendor
 .sass-cache
 .DS_Store
 
